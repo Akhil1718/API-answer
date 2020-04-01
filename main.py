@@ -143,14 +143,14 @@ class Bot(discord.Client):
         self.answer_scores = answer_scores
 
         # embed creation
-        self.embed=discord.Embed(title="TRIVIA", description="**Web Searching** :spy:")
+        self.embed=discord.Embed(title="TRIVIA Answer", description="**Web Searching** :spy:")
         self.embed.set_author(name ='',url=' ',icon_url='https://images-ext-2.discordapp.net/external/aMZ8_Dhu3Cib5U1l--xzP6QVgEV6bzjPDLMC-gNawWY/https/cdn.discordapp.com/attachments/577373201164795904/585046581506605076/ezgif-2-2f5a82b8174f.gif?width=225&height=225')
-        self.embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/595713706411819033/604679180201754674/image0.png")
+        self.embed.set_thumbnail(url="https://media.discordapp.net/attachments/694547475125501962/694961050948206683/giphy_6.gif")
         self.embed.add_field(name="Option I", value="0", inline=False)
         self.embed.add_field(name="Option II", value="0", inline=False)
         self.embed.add_field(name="Option III", value="0", inline=False)
-        self.embed.set_footer(text=f"Trivia", \
-            icon_url="https://cdn.discordapp.com/attachments/595713706411819033/604679180201754674/image0.png")
+        self.embed.set_footer(text=f"Trivia Answer", \
+            icon_url="https://media.discordapp.net/attachments/694547475125501962/694961050948206683/giphy_6.gif")
         self.embed.add_field(name="Suggested Answer!:", value="0", inline=True)
 
         #await self.bot.add_reaction(embed,':spy:')
@@ -283,7 +283,7 @@ def bot_with_cyclic_update_process(update_event, answer_scores):
     upd_thread.start()
 
     loop = asyncio.get_event_loop()
-    loop.create_task(bot.start('NjE0ODM0MjcyMjMwMTc4ODIx.XWFY4g.FOKVExFqojDBPtLChmy6_uJo0So'))
+    loop.create_task(bot.start('Njk0OTQzMjg1Mjk4MzMxNzU5.XoTOgA.otOdulFn48svPjAq13BbYUBefzQ'))
     loop.run_forever()
 
 
@@ -292,7 +292,7 @@ def selfbot_process(update_event, answer_scores):
     selfbot = SelfBot(update_event, answer_scores)
 
     loop = asyncio.get_event_loop()
-    loop.create_task(selfbot.start('NDcyNjcwMjA5MDQwMzE4NDY0.XUFeQQ.l_Qvvzd3Jq5lnwDTPRfAM7xt_ZY',
+    loop.create_task(selfbot.start('Njk0OTQzMjg1Mjk4MzMxNzU5.XoTOgA.otOdulFn48svPjAq13BbYUBefzQ',
                                    bot=False))
     loop.run_forever()
 
